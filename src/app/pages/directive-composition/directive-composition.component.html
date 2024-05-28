@@ -1,0 +1,42 @@
+<section>
+  <h1>Directive composition example</h1>
+  <section>
+    <h3>
+      Create a directive extending from one or more directives to reduce number or attributes on a component tag and
+      reuse directive's code to expand functionalities.
+    </h3>
+    <p>
+      This component use aorCompositeExample (CompositeExampleDirective) and aorCompositeExample this directive use:
+    </p>
+    <ul>
+      <li>ClickHandlerDirective: to notify click event through an event emitter</li>
+      <li>MouseoverHandlerDirective: to notify mouseenter & mouseleave events through an event emitter</li>
+    </ul>
+    <aor-composite-directives-example
+      [counter]="clickCounter"
+      [mouseOverHost]="mouseOverHost"
+      aorCompositeExample
+      (mouseEnterHost)="onMouseEnterHost()"
+      (mouseLeaveHost)="onMouseLeaveHost()"
+      (clicked)="onClicked()">
+    </aor-composite-directives-example>
+    <p>Host directives also can receive input data, e.g: applying a click limit to the counter</p>
+    <aor-composite-directives-example
+      [counter]="limitedClickCounter"
+      [mouseOverHost]="mouseOverHostClickLimit"
+      [maxNumberOfClicks]="5"
+      aorCompositeExample
+      (mouseEnterHost)="onMouseEnterHostClickLimit()"
+      (mouseLeaveHost)="onMouseLeaveHostClickLimit()"
+      (clicked)="onClickedLimited()">
+    </aor-composite-directives-example>
+  </section>
+</section>
+<p-divider></p-divider>
+<section>
+  <h1>Dynamic component example</h1>
+  <section>
+    <h3>Directives can be used in dynamically created components, thanks to hostDirective</h3>
+    <aor-dynamic-renderer></aor-dynamic-renderer>
+  </section>
+</section>

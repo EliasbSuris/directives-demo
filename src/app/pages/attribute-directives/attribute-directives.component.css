@@ -1,0 +1,14 @@
+.text-style-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.style-control {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.highlighted {
+  display: inline;
+}

@@ -1,13 +1,9 @@
 {
   "root": true,
-  "ignorePatterns": [
-    "projects/**/*"
-  ],
+  "ignorePatterns": ["projects/**/*"],
   "overrides": [
     {
-      "files": [
-        "*.ts"
-      ],
+      "files": ["*.ts"],
       "parserOptions": {
         "project": ["**/tsconfig.json"]
       },
@@ -28,7 +24,7 @@
           "error",
           {
             "type": "element",
-            "prefix": ["app"],
+            "prefix": ["aor"],
             "style": "kebab-case"
           }
         ],
@@ -36,7 +32,7 @@
           "error",
           {
             "type": "attribute",
-            "prefix": ["app"],
+            "prefix": ["aor"],
             "style": "camelCase"
           }
         ],
@@ -61,12 +57,8 @@
     },
     // NOTE: WE ARE NOT APPLYING PRETTIER IN THIS OVERRIDE, ONLY @ANGULAR-ESLINT/TEMPLATE¡
     {
-      "files": [
-        "*.html"
-      ],
-      "extends": [
-        "plugin:@angular-eslint/template/recommended"
-      ],
+      "files": ["*.html"],
+      "extends": ["plugin:@angular-eslint/template/recommended"],
       "rules": {}
     },
     // NOTE: WE ARE NOT APPLYING @ANGULAR-ESLINT/TEMPLATE IN THIS OVERRIDE, ONLY PRETTIER

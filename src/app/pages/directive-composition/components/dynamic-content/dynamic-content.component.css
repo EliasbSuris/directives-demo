@@ -1,0 +1,7 @@
+:host {
+  background-color: blueviolet;
+  display: block;
+  height: 200px;
+  user-select: none;
+  width: 200px;
+}

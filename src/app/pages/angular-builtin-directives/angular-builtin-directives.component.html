@@ -1,0 +1,26 @@
+<h1>ANGULAR BUILT IN DIRECTIVES</h1>
+
+<h2>Attribute directives</h2>
+
+<p [ngClass]="classes">I'm a purple text styled by ngClass!</p>
+<p [ngStyle]="{ color: 'purple' }">I'm a purple text styled by ngStyle!</p>
+<input type="text" pInputText [(ngModel)]="value" />
+
+<h3 [style.color]="'#9042f5'">Other ways to apply styles inline</h3>
+<p [class]="classes">I'm a purple text styled by [class]!</p>
+<p [style]="{ color: 'purple' }">I'm a purple text styled by [style]!"</p>
+<p [style.color]="'purple'">I'm a purple text styled by [style.color]!"</p>
+
+<h2>Structural directives</h2>
+
+<p>ngIf</p>
+<p>ngFor</p>
+<p>ngSwitch</p>
+
+<p-divider />
+
+<aor-fake-component [template]="template"></aor-fake-component>
+
+<ng-template #template>
+  <p [style.color]="'#9042f5'">I'm a directive, who needs components?</p>
+</ng-template>

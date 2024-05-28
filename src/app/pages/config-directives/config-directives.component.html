@@ -1,0 +1,85 @@
+<section>
+  <h1>No number directive</h1>
+  <section>
+    <h3>Using a standar input type text</h3>
+    @if (keyPressed) {
+      <p>
+        Key pressed: <span [style.color]="'#c4b5fd'">{{ keyPressed }}</span>
+      </p>
+    } @else {
+      <p>No key pressed</p>
+    }
+    <input aorNoNumbers type="text" (keyPressed)="keyPressed = $event" />
+  </section>
+</section>
+<p-divider />
+<section>
+  <h1>Using aorConfigInputNumber</h1>
+  <section>
+    <h3>Preconfigure input number using directive</h3>
+    <p-inputNumber aorConfigInputNumber></p-inputNumber>
+  </section>
+  <section>
+    <h3>
+      Trying to override decrementButtonIcon with <i [style.color]="'#c4b5fd'" class="pi pi-arrow-left"></i> and
+      incrementButtonIcon with <i [style.color]="'#c4b5fd'" class="pi pi-arrow-right"></i>, oops!
+    </h3>
+    <p-inputNumber
+      aorConfigInputNumber
+      [decrementButtonIcon]="'pi pi-arrow-left'"
+      [incrementButtonIcon]="'pi pi-arrow-right'"></p-inputNumber>
+  </section>
+  <section>
+    <h3>Trying to hide buttons, damn!</h3>
+    <p-inputNumber aorConfigInputNumber [showButtons]="false"></p-inputNumber>
+  </section>
+</section>
+
+<p-divider />
+
+<section>
+  <h1>Using aorConfigInputNumber V2</h1>
+  <section>
+    <h3>Preconfigure input number using directive</h3>
+    <p-inputNumber aorConfigInputNumberV2></p-inputNumber>
+  </section>
+  <section>
+    <h3>
+      Trying to override decrementButtonIcon with <i [style.color]="'#c4b5fd'" class="pi pi-arrow-left"></i> and
+      incrementButtonIcon with <i [style.color]="'#c4b5fd'" class="pi pi-arrow-right"></i>, now works!!
+    </h3>
+    <p-inputNumber
+      aorConfigInputNumberV2
+      [decrementButtonIcon]="'pi pi-arrow-left'"
+      [incrementButtonIcon]="'pi pi-arrow-right'"></p-inputNumber>
+  </section>
+  <section>
+    <h3>Trying to hide buttons, now also works!</h3>
+    <p-inputNumber aorConfigInputNumberV2 [showButtons]="false"></p-inputNumber>
+  </section>
+  <section>
+    <h3>Max 10 Min 0</h3>
+    <p-inputNumber aorConfigInputNumberV2 [showButtons]="false" [max]="10" [min]="0"></p-inputNumber>
+  </section>
+  <section>
+    <h3>Max 10 Min 0 - NG MODEL {{ value }}</h3>
+    <p-inputNumber
+      [(ngModel)]="value"
+      aorConfigInputNumberV2
+      [resetOnLimits]="true"
+      [showButtons]="false"
+      [max]="10"
+      [min]="0"></p-inputNumber>
+  </section>
+</section>
+
+<p-divider />
+<h1>Prime NG Calendar</h1>
+<section>
+  <h3>Calendar directive default config</h3>
+  <p-calendar aorCalendarConfig></p-calendar>
+</section>
+<section>
+  <h3>Calendar directive showing time</h3>
+  <p-calendar aorCalendarConfig [showTime]="true"></p-calendar>
+</section>

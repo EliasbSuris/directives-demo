@@ -1,0 +1,24 @@
+<div class="text-style-controls">
+  <div class="style-control">
+    <label for="text-size">Text size</label>
+    <input id="text-size" type="text" pInputText [(ngModel)]="textStyle.textSize" />
+    <p-slider [(ngModel)]="textStyle.textSize" />
+  </div>
+  <div class="style-control">
+    <label for="text-weight">Text weight</label>
+    <p-dropdown [options]="textWeightValues" [(ngModel)]="textStyle.textWeight" />
+  </div>
+  <div class="style-control">
+    <label for="text-weight">Text weight</label>
+    <p-colorPicker [(ngModel)]="textStyle.color" />
+  </div>
+</div>
+<p [aorTextStyle]="textStyle">I'm a text with an attribute directive applied</p>
+
+<p-divider />
+
+<p aorHighlightColor highlightColor="purple">Hover to highlight!</p>
+
+<p-divider />
+
+<p aorHighlightColorV2 highlightColor="rgb(144, 66, 245)">Hover to highlight!</p>

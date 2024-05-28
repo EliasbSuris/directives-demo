@@ -1,0 +1,11 @@
+:host {
+  display: block;
+  width: 200px;
+  height: 200px;
+  background-color: blueviolet;
+  user-select: none;
+
+  &.mouse-over-host {
+    background-color: purple;
+  }
+}

@@ -1,0 +1,10 @@
+<p *aorHasRole="'admin'">Checking role: ADMIN</p>
+<p *aorHasRole="'editor'">Checking role: EDITOR</p>
+<p *aorHasRole="'no-role'; else noRole">Checking role: NO-ROLE</p>
+<p *aorHasRole="'unknown-role'; else noRole">Checking role: UNKNOWN-ROLE</p>
+
+<ng-template #noRole let-role>
+  <p>
+    The role: <span class="no-role">{{ role }}</span> is not available
+  </p>
+</ng-template>
